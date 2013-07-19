@@ -1,8 +1,8 @@
+<div class="lambda-banner"><%= image_tag "lambda-banner.gif" %></div>
 <h1>Learn lambda calculus</h1>
-<img src="http://latex.codecogs.com/gif.latex?%28%5Clambda%20x.yx%29">
-<img src="http://latex.codecogs.com/gif.latex?%5Clambda%20a.bb">
+<br>
 <%= form_tag("/images", :remote => true) do %>
-  <%= label_tag(:user_string, 'Enter a lambda expression. Use \ instead of a lambda.') %>  # &lambda; &#955; &#x3BB;
+  <%= label_tag(:user_string, 'Enter a lambda expression. Use \ instead of a lambda.') %>
   <%= text_field_tag(:user_string) %>
-  <%= submit_tag("Evaluate", :class => "evaluate") %>
+  <%= submit_tag("Evaluate", :class => "evaluate btn btn-inverse") %>
 <% end %>

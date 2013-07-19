@@ -1,13 +1,30 @@
+body {
+  background-image: url('twinkle_twinkle.png');
+  background-color: black;
+}
+
+.lambda-banner {
+  line-height: 60px;
+}
+
 .container {
   position: relative;
-  padding-top: 20px;
-  top: 20px;
+  padding: 40px;
+  top: 40px;
+  background-color: white;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
 }
 
-.evaluate {
-
+h1 {
+  font-family: 'Fauna One', serif;
 }
 
-img {
-  position: relative;
+label {
+  padding: 8px;
+}
+
+#user_string {
+  margin: 0;
 }
