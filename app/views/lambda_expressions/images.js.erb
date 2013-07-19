@@ -1,0 +1,19 @@
+$(function(){
+  "use strict";
+
+  $(".container").append("You entered <img src='<%= @user_string_image %>.' />");
+  $(".container").append("<div><img src='<%= @reduced_expression_image %>' /></div>");
+
+
+});
+
+
+// $("form.animate").click(function(){
+//   $("img").last().animate({
+//     top: "-=20"
+//   }, 1000).animate({
+//     left: "-=40"
+//   }, 1000).animate({
+//     top: "+=20"
+//   }, 1000);
+// });
