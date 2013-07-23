@@ -1,7 +1,7 @@
 Lambda calculus engine
 ======================
 
-Lambda expressions are a class. Their attributes depend on which kind they are, as defined by the following code snippet from LambdaExpression.rb;
+Lambda expressions are a class. Their attributes depend on which kind they are, as defined by the following code snippet from lambda_expression.rb;
 
 ```ruby
 case args.length
