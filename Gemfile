@@ -50,3 +50,5 @@ gem "less-rails"
 
 # To use debugger
 # gem 'debugger'
+
+gem "lambda-calculus"

@@ -21,5 +21,3 @@ class LambdaExpressionsController < ApplicationController
   end
 
 end
-
-# (\x.yx)\a.bb
