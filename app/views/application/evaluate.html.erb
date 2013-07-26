@@ -1,0 +1,5 @@
+<%= form_tag("/lambda_images", :remote => true) do %>
+  <%= label_tag(:user_string, 'Enter a lambda expression. Use \ instead of a &lambda;.'.html_safe) %>
+  <%= text_field_tag(:user_string, "(\\x.xy)a") %>
+  <%= submit_tag("Evaluate", :class => "evaluate btn btn-inverse") %>
+<% end %>

@@ -1,0 +1,23 @@
+$(function(){
+  "use strict";
+
+  $("input[type='submit']").on("click", function(){
+
+    $(this).parent().append("<p>You entered <img src='<%= @user_string_image %>.' /></p>");
+    $(this).parent().append("<p>This evaluates to <img src='<%= @reduced_expression_image %>.' /></p>");
+    // Add a new evaluate button, and take away the old one.
+
+  });
+
+});
+
+
+// $("form.animate").click(function(){
+//   $("img").last().animate({
+//     top: "-=20"
+//   }, 1000).animate({
+//     left: "-=40"
+//   }, 1000).animate({
+//     top: "+=20"
+//   }, 1000);
+// });

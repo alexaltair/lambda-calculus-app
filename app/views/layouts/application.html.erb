@@ -9,8 +9,24 @@
 </head>
 <body>
 
+  <div class="row">
   <div class="container span6 offset3">
+    <nav>
+      <ul>
+        <a href="/"><li>Home</li></a>
+        <a href="/tutorial"><li>Tutorial</li></a>
+        <a href="/evaluate"><li>Evaluate</li></a>
+      </ul>
+    </nav>
+    <div class="lambda-banner"><%= image_tag "lambda-banner.gif" %></div>
+    <h1>Learn lambda calculus</h1>
+    <br>
     <%= yield %>
+  </div>
+  </div>
+
+  <div class="footer row">
+  <div class="span6 offset3">&copy; Alex Altair 2013</div>
   </div>
 
 </body>

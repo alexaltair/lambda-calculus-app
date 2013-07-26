@@ -1,0 +1,58 @@
+<p>There are three kinds of lambda expressions.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Variables</th>
+      <th>Abstractions</th>
+      <th>Applications</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>x, y, z,</td>
+      <td>&lambda;a.b, &lambda;x.x</td>
+      <td>xy, yz, at, mq</td>
+    </tr>
+    <tr>
+      <td>a, b, c,</td>
+      <td>&lambda;x.xy, &lambda;a.b(ab)</td>
+      <td>a(zy), (&lambda;a.abb)x, mqw</td>
+    </tr>
+    <tr>
+      <td>t, q, h, w ...</td>
+      <td>&lambda;x.&lambda;y.xy ...</td>
+      <td>(&lambda;y.aya)(xz) ...</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Variables are just letters. We use single letters so that we can tell them apart. You could use pictures or other symbols, as long as they're unique.</p>
+
+<p>Abstractions are more interesting. They begin with a &lambda; written 'lambda' and prounounced like it looks. &lambda; is a Greek letter. Mathematicians use Greek letters all the time, because they need more than 26 letters to keep track of things. In an abstraction, the &lambda; just means "here is the beginning of an abstraction!" A lambda abstraction has a <strong>bound variable</strong> and a <strong>body</strong>. The bound variable can only be a variable &mdash; a single letter. The letter after the &lambda; and before the period is the bound variable. The period means "here beings the body". The body can be any other lambda expression; a variable, another abstraction, or an application. That's why the examples above can look simple or complicated. The body probably has an instance of the bound variable in it somewhere (although it doesn't have to). Everything after the period is part of the body, unless a close parenthese stops it.</p>
+
+<p>The last kind of lambda expression is an application. An application is simply two lambda expressions next to each other.
+</p>
+
+<p>So how do we evaluate a lambda expression? A lambda expression can only be reduced if it's an application where the lambda expression on the left is an abstraction.</p>
+
+<div class="row">
+  <div class="span2">
+    <%= form_tag("/lambda_images", :remote => true, :width => 30) do %>
+      <%= text_field_tag(:user_string, "(\\x.xy)a", :class => "example") %><br>
+      <%= submit_tag("Evaluate", :class => "evaluate btn btn-inverse") %>
+    <% end %>
+  </div>
+  <div class="span2">
+    <%= form_tag("/lambda_images", :remote => true) do %>
+      <%= text_field_tag(:user_string, "(\\x.xy)a", :class => "example") %><br>
+      <%= submit_tag("Evaluate", :class => "evaluate btn btn-inverse") %>
+    <% end %>
+  </div>
+  <div class="span2">
+    <%= form_tag("/lambda_images", :remote => true) do %>
+      <%= text_field_tag(:user_string, "(\\x.xy)a", :class => "example", ) %><br>
+      <%= submit_tag("Evaluate", :class => "evaluate btn btn-inverse") %>
+    <% end %>
+  </div>
+</div>

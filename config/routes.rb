@@ -1,9 +1,9 @@
 LambdaCalculus::Application.routes.draw do
 
-  root to: 'lambda_expressions#index'
+  root to: 'application#index'
 
-  resources :lambda_expressions
-
-  post 'images' => 'lambda_expressions#images'
+  get 'tutorial' => 'application#tutorial'
+  get 'evaluate' => 'application#evaluate'
+  post 'lambda_images' => 'application#lambda_images'
 
 end
