@@ -45,25 +45,16 @@ h1 {
   font-family: "Fauna One", "Helvetica Neue", Helvetica, sans-serif;
 }
 
-
-
 .float {
   float: right;
   margin: 10px;
   border: 1px solid black;
 }
 
-
-
-// tutorial page
-.example {
-
+.multi {
+  width: 160px;
 }
 
-
-
-
-// evaluate page
 label {
   padding: 8px;
 }
@@ -71,9 +62,6 @@ label {
 #user_string {
   margin: 0;
 }
-
-
-
 
 .footer {
   line-height: 60px;

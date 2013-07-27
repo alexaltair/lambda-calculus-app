@@ -4,6 +4,6 @@ LambdaCalculus::Application.routes.draw do
 
   get 'tutorial' => 'application#tutorial'
   get 'evaluate' => 'application#evaluate'
-  post 'lambda_images' => 'application#lambda_images'
+  post 'expressions' => 'application#expressions'
 
 end

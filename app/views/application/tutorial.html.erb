@@ -34,25 +34,32 @@
 <p>The last kind of lambda expression is an application. An application is simply two lambda expressions next to each other.
 </p>
 
-<p>So how do we evaluate a lambda expression? A lambda expression can only be reduced if it's an application where the lambda expression on the left is an abstraction.</p>
+<p>So how do we beta reduce a lambda expression? A lambda expression can only be reduced if it's an application where the lambda expression on the left is an abstraction.</p>
 
 <div class="row">
   <div class="span2">
-    <%= form_tag("/lambda_images", :remote => true, :width => 30) do %>
-      <%= text_field_tag(:user_string, "(\\x.xy)a", :class => "example") %><br>
-      <%= submit_tag("Evaluate", :class => "evaluate btn btn-inverse") %>
+    <%= form_tag("/expressions", :class => "beta_reduce") do %>
+      <%= text_field_tag(:user_string, "(\\x.xy)a", :class => "multi") %><br>
+      <%= submit_tag("Beta reduce", :class => "btn btn-inverse") %>
     <% end %>
   </div>
   <div class="span2">
-    <%= form_tag("/lambda_images", :remote => true) do %>
-      <%= text_field_tag(:user_string, "(\\x.xy)a", :class => "example") %><br>
-      <%= submit_tag("Evaluate", :class => "evaluate btn btn-inverse") %>
+    <%= form_tag("/expressions", :class => "beta_reduce") do %>
+      <%= text_field_tag(:user_string, "(\\x.xy)(\\a.ay)", :class => "multi") %><br>
+      <%= submit_tag("Beta reduce", :class => "btn btn-inverse") %>
     <% end %>
   </div>
   <div class="span2">
-    <%= form_tag("/lambda_images", :remote => true) do %>
-      <%= text_field_tag(:user_string, "(\\x.xy)a", :class => "example", ) %><br>
-      <%= submit_tag("Evaluate", :class => "evaluate btn btn-inverse") %>
+    <%= form_tag("/expressions", :class => "beta_reduce") do %>
+      <%= text_field_tag(:user_string, "xy", :class => "multi", ) %><br>
+      <%= submit_tag("Beta reduce", :class => "btn btn-inverse") %>
     <% end %>
   </div>
 </div>
+
+
+<p>To beta-reduce an application, we take the expression on the right, and substitute it into the expression on the left. Where exactly do we substitute it? The bound variable will tell you. You substitute the right expression into the <em>body</em> of the left expression, wherever the bound variable appears. That's it! Then the &lambda; goes away of course, along with the bound variable and period, because they've already done their job.</p>
+
+<p>Doing this once is fine, but the real complexity comes from doing beta reduction over and over. Don't forget that lambda expression are made of other lambda expression (except variables). If one of the inside expressions is reducible, then you can reduce the inside one instead of the whole thing. If the new expression has a reducible part, then keep going! When there's nothing left to beta-reduce, you've arrived at what's called the <strong>normal form</strong>.</p>
+
+<!-- Put three more examples here, which use full evaluation. -->

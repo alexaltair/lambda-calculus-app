@@ -11,7 +11,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'annotate'
   gem 'rspec-rails'
-
+  gem 'pry-rails'
 end
 
 group :production do
