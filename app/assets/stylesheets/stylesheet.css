@@ -47,6 +47,9 @@ h1 {
 
 
 
+
+
+/*home page*/
 .float {
   float: right;
   margin: 10px;
@@ -55,15 +58,15 @@ h1 {
 
 
 
-// tutorial page
-.example {
-
+/*tutorial page*/
+.multi {
+  width: 160px;
 }
 
 
 
 
-// evaluate page
+/*evaluate page*/
 label {
   padding: 8px;
 }
