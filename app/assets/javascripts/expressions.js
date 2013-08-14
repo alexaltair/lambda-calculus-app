@@ -15,7 +15,7 @@ $(function(){
         var stringImage = expression.stringImage;
         var reducedExpressionImage = expression.reducedExpressionImage;
 
-        $("<br><p><img src='"+stringImage+"' /> reduces to <img src='"+reducedExpressionImage+".' /></p>").hide().appendTo(form.parent()).fadeIn();
+        $("<p><img src='"+stringImage+"' /> reduces to <img src='"+reducedExpressionImage+".' /></p><br>").hide().appendTo(form.parent()).fadeIn();
       }
     })
   });
