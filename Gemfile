@@ -12,6 +12,7 @@ group :development, :test do
   gem 'annotate'
   gem 'rspec-rails'
   gem 'pry-rails'
+  gem 'capybara'
 end
 
 group :production do
